@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.fl{float: left;}
+.h600{height: 600px;}
+.ovh {overflow: hidden;}
+    div>div:first-child{
+    background-color: red; width: 400px;}
+    div>div:last-child{
+    background-color: yellow; width: 200px;
+    }
+div:nth-child(2) {
+    width: 150px; background-color:aqua;
+}
+div:nth-child(3) {
+    width: 250px; background-color: green;
+}
+div:nth-child(4) {
+    width: 200px; background-color:rgb(228, 100, 228);
+}
+
+
+/* 부모의 크기가 없을때 overflow-hidden 사용시
+자식의 크기를 따라간다. */
+

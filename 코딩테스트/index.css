@@ -1,0 +1,41 @@
+#container {
+    width: 600px;
+    height: 1200px;
+}
+
+.a , .b , .c, .d , .e {
+    height: 600px;
+}
+.b, .e {
+    width: 200px;
+}
+.a {
+    width: 400px;
+    background-color: red;
+    float: left;
+}
+
+.b {
+    background-color: yellow;
+    float: left;
+}
+
+.c {
+    width: 150px;
+    background-color: skyblue;
+    float: left;
+
+}
+
+.d {
+    width: 250px;
+    background-color: green;
+    float: left;
+}
+
+.e {
+    background-color: purple;
+    float: left;
+}
+
+

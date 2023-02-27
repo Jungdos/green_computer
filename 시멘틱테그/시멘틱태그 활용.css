@@ -1,0 +1,73 @@
+html, body, header, section, article, aside, footer, div {
+    margin: 0; padding: 0;}
+header {
+    height: 200px; background-color: red;}
+section {
+    height: 800px; background-color: yellow;}
+article {height: 500px;}
+article > div {
+    background-color: green; float:left; width: 40%;
+    height: 100%;}
+article>aside {
+    float: left; width: 60%; height: 100%;}
+article > aside > div:first-child{
+    background-color: aqua;height: 40%;}
+article > aside> div:last-child {
+    background-color: darkblue;height: 60%}
+footer{
+    background-color: black;}
+
+
+
+
+
+/* * {
+    margin: 0;
+    padding: 0;
+}
+
+fl{float: left;}
+
+header {
+    height: 200px;background-color: red;
+}
+section {
+    height: 800px; background-color: blue;
+}
+article {
+    height: 500px;
+    overflow: hidden;
+}
+.atc1 {
+    height: 100%; width: 500px;
+    background-color:darkred;
+}
+
+.atc2 {
+    height: 100%;
+}
+
+.div1 {
+    width: 500px; height: 100%;
+    background-color: darkblue;
+}
+
+.div2 {
+    height: 50%; width: 50%;
+    background-color: coral;
+}
+
+footer {
+    height: 150px;
+    background-color: black;
+} */
+
+200px
+
+800px
+
+500   100%(3/2)
+
+150px
+
+/* 부모가 픽셀 값이 있을떄 자식은 퍼센트로 가능 */
