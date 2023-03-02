@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        /* switch(비교할값){
+            case() 값1 :
+            문장1
+            break;
+            case() 값2 :
+            문장2
+            break;
+            default:
+            문장 마지막
+            break;
+
+            default항상 마지막에 
+            
+        } 
+        */ 
+
+        /* var input = Number(prompt("숫자를 입력하세요","숫자만"));
+        switch(input%2){
+            case 0:
+                alert("짝수")
+                break;
+            case 1:
+            alert("홀수")
+            break;
+            default:
+            alert("숫자가 아닙니다");
+            break;
+        }
+        */
+        var date = new Date();
+        var hour = date.getHours();
+            switch(true){
+                case hour < 11:
+                    alert("아침")
+                break; 
+                case hour < 15:
+                    alert("점심")
+                break;
+                default :
+                    alert("저녁")
+                break;
+            }
+
+
+    </script>
+    <title>조건문switch</title>
+</head>
+<body>
+    
+</body>
+</html>
