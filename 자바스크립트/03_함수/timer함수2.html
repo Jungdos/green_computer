@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var num = 1;
+        var code1 = setInterval(function(){
+            if(num%2 == 0){
+                document.write("<h1>"+num+"초가 지났습니다.</h1>");
+            }
+            num++;
+            // 주민번호 남녀 비교할떄 짝수 홀수로 무언가를 비교할떄
+        },1000);
+        setTimeout(function(){
+            clearInterval(code1);
+            // 변수명 var로 지정하고 불러오기
+        },10000);
+            // ex) 연말연시 1월 넘어갈떄 새해가 올때 팝업식으로 뜨는 형태
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
