@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입창</title>
+    <link rel="stylesheet" href="./회원가입창활용.css">
+    <script>
+        function checkfrm(){
+            if(!frm.chk.checked){//frm이름인 form태그안에 name이 chk인 체크박스에 체크가 걸리지않다면
+                alert("고객신용 정보동의 내용에 동의하셔야 온라인 상담을 할 수 있습니다.");
+                frm.chk.focus();
+                return false;
+            }
+            return true;
+        }
+
+        /* 선언적 함수 호출 checkfrm(임의의 이름지정)*/
+        /* 변수명 . 값*/
+
+    </script>
+</head>
+<body>
+    <!-- 분리해서 사용할 가능성이 있기떄문에 제목과 폼태그를 친구요소로 따로 만드는경우가 많다 -->
+    <div>
+        <div id="formdiv">
+        <h3>회원가입</h3>
+        <form action="aa.php" name="frm" class="new" onsubmit="return checkfrm(this)"> 
+            <!-- 클래스 중복으로 달고싶다면 추가가 아닌 띄어쓰기로-->
+            <!-- form속성안에서 name은 건들지 말자  -->
+            <dl>
+                <dt>성함</dt>
+                    <dd class="dataname">
+                        <input type="text" value="" name="text"
+                        placeholder="한글 성함 입력해주세요.">
+                        <span>*반드시 한글로 입력해주세요.</span>
+                    </dd>
+                    <dt>성별</dt>
+                    <dd>
+                        <input type="radio" name="sex" id="data1">
+                        <label for="data1">남</label>
+                        <input type="radio" name="sex" id="data2">
+                        <label for="data2">여</label>
+                    </dd>
+                    <dt>핸드폰</dt>
+                    <dd>
+                        <select name="hp[0]">
+                            <option value="">선택</option>
+                            <option value="">010</option>
+                            <option value="">011</option>
+                            <option value="">016</option>
+                            <option value="">017</option>
+                            <option value="">018</option>
+                            <option value="">019</option>
+                        </select>
+                        <span>-</span>
+                        <input type="text" name="hp[1]"
+                        maxlength="4" size="5">
+                        <span>-</span>
+                        <input type="text" name="hp[2]"
+                        maxlength="4" size="5">
+                        <!-- hp[] name에서 array(배열)로 받아오기 위한 사용법
+                        배열사용하는건 인덱스 규칙을 준수하는것이기떄문에 0부터 사용-->
+                    </dd>
+                    <dt>취미</dt>
+                    <dd>
+                        <input type="checkbox" name="hobby[0]" id="hobby0">
+                        <label for="hobby0">독서</label>
+                        <input type="checkbox" name="hobby[1]" id="hobby1">
+                        <label for="hobby1">여행</label>
+                        <input type="checkbox" name="hobby[2]" id="hobby2">
+                        <label for="hobby2">운동</label>
+                        <input type="checkbox" name="hobby[3]" id="hobby3">
+                        <label for="hobby3">게임</label>
+                        <input type="checkbox" name="hobby[4]" id="hobby4">
+                        <label for="hobby4">음악</label>
+                    </dd>
+            </dl>
+            <div class="btns"> <!-- 포폴에선 div 안에 div 로 할것-->
+                <p> <!-- br를 남발하는건 금지. 한줄로 쓰기위해서 p -->
+                    <input type="checkbox" id="chk" name="chk">
+                    <label for="chk">개인정보 동의</label>
+                </p>
+                <input type="submit" value="가입하기">
+                <input type="reset" value="취소">
+            </div>
+        </form>
+    </div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+body, ul, li, div, h3, dl, dt, dd {
+    margin: 0;
+    padding: 0;
+}
+form, input {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    /* 아웃라인을 넣는 이유 = 옜날 버전으로 사용시
+    테두리가 생길수도 있으므로. 버전에따라 경우의수가
+    생김. */
+}
+img {
+    border: 0;
+    /* 이미지 또한 버전이 낮을경우 라인이 생길수도있어서 선을 없애주는 작업을 한다. */
+}
+div#formdiv {
+    width: 800px;
+    margin: 0 auto;
+}
+div#formdiv h3 {
+    margin-bottom: 20px;
+}
+div#formdiv form.new{}
+/* class를 부를 떄 form태그에서는 form이라고 하는것을 부르고 설정하는것이 좋다.
+   class는 좀더 다중으로 있기떄문에 확실히 입력해주면좋다. */
+div#formdiv form.new dl{
+    border-top: 3px solid palevioletred;
+    overflow: hidden;
+}
+div#formdiv form.new dl dt,
+div#formdiv form.new dl dd{
+    line-height: 30px;
+    height: 30px;
+    float: left;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid black;
+/* 인라인요소이기떄문에 수직정렬 해준것. 영향을 안받기떄문에 
+top 과 bottom에 1px 씩 준건 음영효과를 주기위해*/
+}
+div#formdiv form.new dl dt{
+    width: 30%;
+    font-weight: bold;
+}
+div#formdiv form.new dl dd{
+    width: 70%;
+    background-color: #f8f8f8;
+}
+div#formdiv form.new dl dd.dataname span{
+    display: none;
+}
+div#formdiv form.new dl dd.dataname input:focus+span{
+    display: inline-block;
+}
+div#formdiv form.new dl dd.dataname input:focus {
+    border-color: rgba(143,143,143);
+    /* rgba 는 음영값을 주기위해 사용.
+    내가준 색만 주기위해서. 알파값을 주는것
+     */
+}
+#formdiv div.btns{
+    text-align: right;
+    /* 인라인요소 지만 속성값만으로 위치를 이동시키려면
+    text-align을 사용한다. 
+    float-right 를 사용한다면 다른요소들을 추가할시 치고올라올수있어서 X */
+}
+/* 폼테그에서는 넘버스 차일드 사용에 고민 
+    클래스를 넣어서 사용하는것이 문제가되지않음.
+    추가적으로 넣는게 없다. 라고 한다면 넘버스 사용이 맞음*/
+    #formdiv div.btns input{
+        line-height: 30px;
+        cursor: pointer;
+        padding: 0 10px;
+        border: 0;
+        color: white;
+    }
+#formdiv div.btns input:hover {
+    line-height: 28px;
+    padding: 0 9px;
+}
+#formdiv div.btns input[type=reset]{
+    background-color: gray;
+}
+#formdiv div.btns input[type=reset]:hover {
+    border: 1px solid rgb(5, 222, 238);
+    background-color: white;
+    color: #505050;
+}
+#formdiv div.btns input[type=submit] {
+    background-color: red;
+    color: white;
+}
+#formdiv div.btns input[type=submit]:hover {
+    border: 1px solid rgb(5, 222, 238);
+    background-color: white;
+    color: #505050;
+}
